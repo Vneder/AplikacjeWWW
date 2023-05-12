@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+.container {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom left, #F53844, #42378f);
+}
+
+.logContainer {
+    height: 100vh;
+}
+
+.logowanie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 60vw;
+    height: 40vh;
+    color: #fff;
+    border-radius: 30px;
+    padding: 2rem;
+}
+
+.main {
+    margin-top: 2rem;
+    margin-bottom: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 94vw;
+    color: #fff;
+    border-radius: 30px;
+    padding: 2rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+p {
+    padding-top: 1rem;
+    padding-bottom: 0.6rem;
+}
+
+input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.btn {
+    background: #252525;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 18px;
+    border: none;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.title-gun {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #fff;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+}
+
+img {
+    width: 70%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.row {
+    width: 100%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (max-width: 767px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.title-gun,
+.price-gun {
+    text-align: center;
+}
+
+.price-gun {
+    padding-top: 2rem;
+    font-size: 1.6rem;
+}
+
+.title-row {
+    text-align: center;
+    padding: 3rem;
+}
+
+.info-gun {
+    text-align: left;
+}
+
+.buy-btn {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 60%;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffc107;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cart-popup {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(153, 255, 0, 0.8);
+    border-radius: 10px;
+    color: darkgreen;
+    padding: 1rem;
+    display: none;
+}
+
+.cart-popupr {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(247, 83, 83, 0.8);
+    color: darkred;
+    border-radius: 10px;
+    padding: 1rem;
+    display: none;
+}
+
+.cart {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.cart ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cart li {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    position: relative;
+    transition: all 0.3s ease-out;
+}
+
+.cart li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 0, 0, 0.8);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.cart li:hover:before {
+    opacity: 1;
+}
+
+.cart li span {
+    font-size: 0.9em;
+}
+
+.cart hr {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.cart h4 {
+    font-size: 1.1em;
+}
+
+.cart .cart-popup {
+    background-color: #4CAF50;
+    color: white;
+    display: none;
+    font-size: 1.1em;
+    padding: 10px;
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    z-index: 1;
+}
+
+.cart ul li {
+    position: relative;
+    transition: all 0.3s ease-out;
+}
