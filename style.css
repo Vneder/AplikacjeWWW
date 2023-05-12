@@ -29,10 +29,9 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.3);
     width: 60vw;
-    height: 40vh;
+    height: 80vh;
     color: #fff;
     border-radius: 30px;
-    padding: 2rem;
 }
 
 .main {
@@ -63,16 +62,22 @@ p {
 input {
     background: none;
     border: none;
+    outline: none;
     border-bottom: 1px solid #fff;
     color: #fff;
+    font-size: 16px;
+    width: 200px;
+    padding: 0 0.5rem;
 }
 
 .btn {
     background: #252525;
     padding: 1rem 2rem;
-    border-radius: 30px;
+    margin-bottom: 1rem;
+    border-radius: 25px;
     font-size: 18px;
     border: none;
+    cursor: pointer;
 }
 
 a {

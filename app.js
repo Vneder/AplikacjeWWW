@@ -30,7 +30,7 @@ $('.buy-btn').click(function () {
     // ukrywanie popupa
     setTimeout(function () {
         $('.cart-popup').fadeOut();
-    }, 2000);
+    }, 800);
 });
 
 // Usuwanie przedmiotów z koszyka
@@ -53,7 +53,7 @@ $('.cart ul').on('click', 'li', function () {
         popup.fadeOut(function () {
             $(this).remove();
         });
-    }, 2000);
+    }, 800);
 
     // Aktualizacja łącznej ceny koszyka
     $('.total-price').text((totalPrice - price * count).toFixed(2) + ' zł');

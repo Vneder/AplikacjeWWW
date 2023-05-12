@@ -34,12 +34,16 @@
                 <input type="submit" value="Log in" class="btn">
                 <br>
                 <br>
-                <br>
                 <?php
                     if(isset($_SESSION['blad'])){
                         echo $_SESSION['blad'];
                     }
                 ?>
+                <br>
+                <h3>Nie masz konta?</h3>
+                <br>
+                <br>
+                <a href="register.php" class="btn">Zarejestruj się</a>
             </form>
         </div>
     </div>

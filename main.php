@@ -58,7 +58,7 @@
                         <div class="info-gun">
                             <p>Kaliber: .44 Magnum</p>
                             <p>Pojemność magazynka: 8 naboi</p>
-                            <p>Długość lufy: 6" / 152 mm</p>
+                            <p>Długość lufy: 152mm</p>
                             <p>Waga: 2100g</p>
                             <p>Opór spustu: 4 lb / 2 kg</p>
                         </div>
@@ -73,7 +73,7 @@
                         <div class="info-gun">
                             <p>Kaliber: 9 Parabellum</p>
                             <p>Pojemność magazynka: 15 naboi</p>
-                            <p>Długość lufy: 118 mm</p>
+                            <p>Długość lufy: 118mm</p>
                             <p>Waga: 720g</p>
                             <p>Spust SA/DA</p>
                         </div>
@@ -136,9 +136,9 @@
                             <img src="./img/m24.png" alt="M24" class="img-gun">
                         </div>
                         <div class="info-gun">
-                            <p>Kaliber: .308 Win.</p>
+                            <p>Kaliber: 7.62mm</p>
                             <p>Pojemność magazynka: 5 naboi</p>
-                            <p>Długość lufy: 610 mm</p>
+                            <p>Długość lufy: 610mm</p>
                             <p>Waga: 5,5 kg</p>
                             <p>Zasięg maksymalny: 2000 m</p>
                         </div>
@@ -152,9 +152,9 @@
 
                         </div>
                         <div class="info-gun">
-                            <p>Kaliber: 12.7 mm</p>
+                            <p>Kaliber: 12.7mm</p>
                             <p>Pojemność magazynka: 5 naboi</p>
-                            <p>Długość lufy: 737 mm</p>
+                            <p>Długość lufy: 737mm</p>
                             <p>Waga: 11,8 kg </p>
                             <p>Zasięg maksymalny: 3500 m</p>
                         </div>
@@ -168,9 +168,9 @@
 
                         </div>
                         <div class="info-gun">
-                            <p>Kaliber: 7,62 mm </p>
+                            <p>Kaliber: 7,62mm </p>
                             <p>Pojemność magazynka: 10 naboi</p>
-                            <p>Długość lufy: 620 mm</p>
+                            <p>Długość lufy: 620mm</p>
                             <p>Waga: 4,3 kg</p>
                             <p>Zasięg maksymalny: 2800 m</p>
                         </div>
