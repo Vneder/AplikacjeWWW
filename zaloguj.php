@@ -19,24 +19,30 @@
         $password = $_POST['password'];
 
         $login = htmlentities($login, ENT_QUOTES, "UTF-8");
-        $password = htmlentities($password, ENT_QUOTES, "UTF-8");
+        // $password = htmlentities($password, ENT_QUOTES, "UTF-8");
 
-        $sql = "SELECT * FROM users WHERE user='$login' AND pass='$password'";
+        $sql = "SELECT * FROM users WHERE user='$login'";
 
         if($result = @$connect->query($sql)){
             $ilu_userow = $result->num_rows;
             if($ilu_userow>0){
-
-                $_SESSION['zalog']= true;
-
                 $wiersz = $result->fetch_assoc();
-                $_SESSION['id'] = $wiersz['id'];
-                $_SESSION['user'] = $wiersz['user'];
 
-                unset($_SESSION['blad']);
-                
-                $result->free_result();
-                header('Location: main.php');
+                if(password_verify($password,$wiersz['pass'])){
+                    $_SESSION['zalog']= true;
+                    $_SESSION['id'] = $wiersz['id'];
+                    $_SESSION['user'] = $wiersz['user'];
+    
+                    unset($_SESSION['blad']);
+                    
+                    $result->free_result();
+                    header('Location: main.php');
+                }
+                else{
+                    $_SESSION['blad'] = '<h1 style="color:red">Zły login lub hasło!</h1>';
+    
+                    header('Location: index.php');
+                }
             }
             else{
                 $_SESSION['blad'] = '<h1 style="color:red">Zły login lub hasło!</h1>';

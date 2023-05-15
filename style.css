@@ -19,7 +19,17 @@ body {
 }
 
 .logContainer {
-    height: 100vh;
+    min-height: 100vh;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.thanks {
+    padding-bottom: 2rem;
 }
 
 .logowanie {
@@ -29,9 +39,16 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.3);
     width: 60vw;
-    height: 80vh;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     color: #fff;
     border-radius: 30px;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .main {
@@ -158,8 +175,8 @@ img {
 
 .cart-popup {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 25px;
     background-color: rgba(153, 255, 0, 0.8);
     border-radius: 10px;
     color: darkgreen;
@@ -169,8 +186,8 @@ img {
 
 .cart-popupr {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 15px;
+    right: 25px;
     background-color: rgba(247, 83, 83, 0.8);
     color: darkred;
     border-radius: 10px;
