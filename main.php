@@ -31,7 +31,6 @@
             </nav>
             <h1>Sklep zbrojny</h1>
 
-            
             <section class="products">
                 <h2 class="title-row">Bronie krótkie</h2>
                 <div class="row">

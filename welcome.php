@@ -37,9 +37,6 @@
             <a href="index.php" class="btn">Zaloguj się</a>
         </div>
     </div>
-
-
-
 </body>
 
 </html>

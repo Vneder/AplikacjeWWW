@@ -63,8 +63,6 @@
                     $_SESSION['e_email']="Taki email jest już zajęty!";
                 }
 
-                //--------------
-
                 $rezultat = $connect->query("SELECT id FROM users WHERE user='$nick'");
 
                 if(!$rezultat) throw new Exception($connect->error);
@@ -144,13 +142,11 @@
 
                 <p>Password again:</p>
                 <input type="password" value="<?php if(isset($_SESSION['fr_pass2'])){echo $_SESSION['fr_pass2'];unset($_SESSION['fr_pass2']);} ?>" name="pass2">
-                <br>
-                <br>
-                <input type="submit" class="btn" value="Zarejestruj się">
+                <p>
+                    <input type="submit" class="btn" value="Zarejestruj się">
+                </p>
 
                 <h3>Masz już konto?</h3>
-                <br>
-                <br>
                 <a href="index.php" class="btn">Wróć do logowania</a>
             </form>
         </div>

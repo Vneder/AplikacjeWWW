@@ -25,24 +25,17 @@
                 <h1>Logowanie</h1>
                 <p>Login:</p>
                 <input type="text" name="login">
-                
                 <p>Password:</p>
                 <input type="password" name="password">
-                <br>
-                <br>
-                
-                <input type="submit" value="Log in" class="btn">
-                <br>
-                <br>
+                <p>
+                    <input type="submit" value="Zaloguj się" class="btn">
+                </p>
                 <?php
                     if(isset($_SESSION['blad'])){
                         echo $_SESSION['blad'];
                     }
                 ?>
-                <br>
                 <h3>Nie masz konta?</h3>
-                <br>
-                <br>
                 <a href="register.php" class="btn">Zarejestruj się</a>
             </form>
         </div>
