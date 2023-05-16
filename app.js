@@ -1,4 +1,5 @@
 let cartItems = {};
+let itemId = 0;
 
 $('.buy-btn').click(function () {
     let card = $(this).closest('.card');
@@ -6,13 +7,26 @@ $('.buy-btn').click(function () {
     let price = parseFloat(card.find('.price-gun').text().replace(' zł', '').replace(/\s/g, ''));
     if (cartItems[name]) {
         cartItems[name].count++;
-        cartItems[name].element.text(name + ': ' + cartItems[name].price.toFixed(2) + ' zł x ' + cartItems[name].count);
+        cartItems[name].element.find('.count').text(cartItems[name].count);
     } else {
         // dodawanie elementu do koszyka
-        let item = $('<li>').text(name + ': ' + price.toFixed(2) + ' zł');
+        let item = $('<li>').addClass('cart-item');
+        let itemName = $('<span>').addClass('item-name').text(name);
+        let itemPrice = $('<span> ').addClass('item-price').text(price.toFixed(2) + ' zł');
+        let itemQuantity = $('<span>').addClass('count').text('1');
+        let removeBtn = $('<button>').addClass('remove-btn').text('X');
+        item.append(itemName, itemPrice, ' x', itemQuantity, ' ', removeBtn);
+
+        // Przypisanie unikalnego identyfikatora do elementu
+        let id = 'item-' + itemId;
+        item.attr('id', id);
+        removeBtn.attr('data-item-id', id);
+        itemId++;
+
         $('.cart ul').append(item);
 
         cartItems[name] = {
+            id: id,
             price: price,
             count: 1,
             element: item
@@ -20,10 +34,18 @@ $('.buy-btn').click(function () {
     }
 
     // Aktualizacja łącznej ceny koszyka
-    let totalPrice = parseFloat($('.total-price').text());
-    $('.total-price').text((totalPrice + price).toFixed(2) + ' zł');
+    let totalPrice = 0;
+    Object.values(cartItems).forEach(item => {
+        totalPrice += item.price * item.count;
+    });
+    $('.total-price').text(totalPrice.toFixed(2) + ' zł');
 
-    $('.cart').show();
+    // Sprawdzanie, czy koszyk jest pusty
+    if ($.isEmptyObject(cartItems)) {
+        $('.cart').hide();
+    } else {
+        $('.cart').show();
+    }
 
     // wyświetlanie popupa
     $('.cart-popup').fadeIn();
@@ -34,13 +56,15 @@ $('.buy-btn').click(function () {
 });
 
 // Usuwanie przedmiotów z koszyka
-$('.cart ul').on('click', 'li', function () {
-    let name = $(this).text().split(': ')[0];
+$('.cart ul').on('click', '.remove-btn', function () {
+    let itemId = $(this).attr('data-item-id');
+    let item = $('#' + itemId);
+    let name = item.find('.item-name').text();
     let price = cartItems[name].price;
     let count = cartItems[name].count;
     let totalPrice = parseFloat($('.total-price').text());
 
-    $(this).remove();
+    item.remove();
     delete cartItems[name];
 
     // wyświetlanie popupa
@@ -56,5 +80,11 @@ $('.cart ul').on('click', 'li', function () {
     }, 800);
 
     // Aktualizacja łącznej ceny koszyka
-    $('.total-price').text((totalPrice - price * count).toFixed(2) + ' zł');
+    let newTotalPrice = totalPrice - price * count;
+    $('.total-price').text(newTotalPrice.toFixed(2) + ' zł');
+
+    // Sprawdzanie, czy koszyk jest pusty
+    if ($.isEmptyObject(cartItems)) {
+        $('.cart').hide();
+    }
 });

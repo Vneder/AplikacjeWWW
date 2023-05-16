@@ -56,7 +56,7 @@ h3 {
 
 .main {
     margin-top: 2rem;
-    margin-bottom: 22rem;
+    margin-bottom: 28rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -205,6 +205,7 @@ img {
     position: fixed;
     bottom: 20px;
     left: 20px;
+    display: none;
 }
 
 .cart ul {
@@ -214,33 +215,11 @@ img {
 }
 
 .cart li {
-    cursor: pointer;
     display: flex;
     justify-content: space-between;
     margin-bottom: 6px;
     position: relative;
     transition: all 0.3s ease-out;
-}
-
-.cart li:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 0, 0, 0.8);
-    z-index: -1;
-    opacity: 0;
-    transition: all 0.3s ease-out;
-}
-
-.cart li:hover:before {
-    opacity: 1;
-}
-
-.cart li span {
-    font-size: 0.9em;
 }
 
 .cart hr {
@@ -267,4 +246,47 @@ img {
 .cart ul li {
     position: relative;
     transition: all 0.3s ease-out;
+}
+
+.item-name {
+    min-width: 170px;
+}
+
+.item-price {
+    min-width: 100px;
+}
+
+.count {
+    min-width: 30px;
+}
+
+.remove-btn {
+    background: red;
+    padding: 0.2rem 0.4rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+
+.mini-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buy-finale {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #62ff07;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: right;
+}
+
+.koszyk {
+    margin-bottom: 0.6rem;
 }

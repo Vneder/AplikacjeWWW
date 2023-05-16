@@ -180,13 +180,17 @@
             </section>
 
             <div class="cart">
-                <h2>Koszyk:</h2>
+                <h2 class="koszyk">Koszyk:</h2>
                 <ul>
-                    <!-- koszyk -->
+                <!-- koszyk -->
                 </ul>
                 <hr>
                 <h4>Łączna cena: <span class="total-price">0.00 zł</span></h4>
+                <div class="mini-row">
+                    <button class="buy-finale">Kup teraz!</button>
+                </div>
             </div>
+
             
         </main>
         <div class="cart-popup">Dodano do koszyka</div>
