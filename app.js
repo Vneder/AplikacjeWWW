@@ -9,7 +9,7 @@ $('.buy-btn').click(function () {
         cartItems[name].count++;
         cartItems[name].element.find('.count').text(cartItems[name].count);
     } else {
-        // dodawanie elementu do koszyka
+        // Dodawanie elementu do koszyka
         let item = $('<li>').addClass('cart-item');
         let itemName = $('<span>').addClass('item-name').text(name);
         let itemPrice = $('<span> ').addClass('item-price').text(price.toFixed(2) + ' zł');
@@ -40,15 +40,12 @@ $('.buy-btn').click(function () {
     });
     $('.total-price').text(totalPrice.toFixed(2) + ' zł');
 
-    // Sprawdzanie, czy koszyk jest pusty
-    if ($.isEmptyObject(cartItems)) {
-        $('.cart').hide();
-    } else {
-        $('.cart').show();
-    }
+    // Pokazywanie koszyka
+    $('.cart').addClass('show');
 
     // wyświetlanie popupa
     $('.cart-popup').fadeIn();
+
     // ukrywanie popupa
     setTimeout(function () {
         $('.cart-popup').fadeOut();
@@ -83,8 +80,18 @@ $('.cart ul').on('click', '.remove-btn', function () {
     let newTotalPrice = totalPrice - price * count;
     $('.total-price').text(newTotalPrice.toFixed(2) + ' zł');
 
-    // Sprawdzanie, czy koszyk jest pusty
+    // Sprawdzanie czy koszyk jest pusty
     if ($.isEmptyObject(cartItems)) {
-        $('.cart').hide();
+        $('.cart').removeClass('show');
     }
+});
+
+// Pokazywanie i ukrywanie koszyka po kliknięciu w ikonkę koszyka
+$('.cart-icon').click(function () {
+    $('.cart').toggleClass('show');
+});
+
+// Ukrywanie koszyka po kliknięciu w przycisk z krzyżykiem
+$('.close-btn').click(function () {
+    $('.cart').removeClass('show');
 });

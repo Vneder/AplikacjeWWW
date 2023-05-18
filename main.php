@@ -20,14 +20,16 @@
 </head>
 
 <body>
-
     <div class="container">
         <main class="main">
             <nav>
-                <?php
-                    echo "<h1>Witaj ".$_SESSION['user']."!</h1>";
-                    echo '<p><a href="logout.php" class="btn">Log out</a></p>';
-                ?>
+                <img src="./img/logo.png" alt="logo-gun" class="logo">
+                <div class="nav-content">
+                    <?php
+                        echo "<h1>Witaj ".$_SESSION['user']."!</h1>";
+                    ?>
+                    <a href="logout.php" class="btn-mini"><img src="./img/logout.png" alt="logout-button" class="logout-img"></a>
+                </div>
             </nav>
             <h1>Sklep zbrojny</h1>
 
@@ -182,21 +184,23 @@
             <div class="cart">
                 <h2 class="koszyk">Koszyk:</h2>
                 <ul>
-                <!-- koszyk -->
+                    <!-- koszyk -->
                 </ul>
                 <hr>
                 <h4>Łączna cena: <span class="total-price">0.00 zł</span></h4>
                 <div class="mini-row">
                     <button class="buy-finale">Kup teraz!</button>
                 </div>
+                <button class="close-btn">x</button>
             </div>
+            <div class="cart-icon">🛒</div>
 
-            
         </main>
         <div class="cart-popup">Dodano do koszyka</div>
-
+        <footer class="footer">
+            <p>Copyright &copy; 2023 - Łukasz Woźniakowski</p>
+        </footer>
     </div>
-
     <script src="app.js"></script>
 </body>
 

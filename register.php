@@ -120,7 +120,7 @@
                     }
                 ?>
 
-                <p>Email:</p>
+                <p>E-mail:</p>
                 <input type="email" value="<?php if(isset($_SESSION['fr_email'])){echo $_SESSION['fr_email'];unset($_SESSION['fr_email']);} ?>" name="email">
 
                 <?php
@@ -130,7 +130,7 @@
                     }
                 ?>
 
-                <p>Password:</p>
+                <p>Hasło:</p>
                 <input type="password" value="<?php if(isset($_SESSION['fr_pass1'])){echo $_SESSION['fr_pass1'];unset($_SESSION['fr_pass1']);} ?>" name="pass1">
 
                 <?php
@@ -140,7 +140,7 @@
                     }
                 ?>
 
-                <p>Password again:</p>
+                <p>Powtórz hasło:</p>
                 <input type="password" value="<?php if(isset($_SESSION['fr_pass2'])){echo $_SESSION['fr_pass2'];unset($_SESSION['fr_pass2']);} ?>" name="pass2">
                 <p>
                     <input type="submit" class="btn" value="Zarejestruj się">

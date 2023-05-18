@@ -25,7 +25,7 @@
                 <h1>Logowanie</h1>
                 <p>Login:</p>
                 <input type="text" name="login">
-                <p>Password:</p>
+                <p>Hasło:</p>
                 <input type="password" name="password">
                 <p>
                     <input type="submit" value="Zaloguj się" class="btn">
